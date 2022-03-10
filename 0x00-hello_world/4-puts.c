@@ -1,7 +1,8 @@
 #include <stdio.h>
-/*
- * Puts function sample
- * First C program
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
