@@ -8,17 +8,6 @@
 
 int main()
 {
-	char a = '0';
-	putchar(a);
-	putchar(++a);
-	putchar(++a);
-	putchar(++a);
-	putchar(++a);
-	putchar(++a);
-	putchar(++a);
-	putchar(++a);
-	putchar(++a);
-	putchar(++a);
-	putchar('\n');
-	return 0;
+	puts("0123456789");
+	return (0);
 }
