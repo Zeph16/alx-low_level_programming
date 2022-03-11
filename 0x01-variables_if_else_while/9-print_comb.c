@@ -18,6 +18,5 @@ int main(void)
 		putchar(a);
 		a++;
 	} while (a != 58);
-	putchar('\n');
 	return (0);
 }
