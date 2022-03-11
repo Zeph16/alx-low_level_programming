@@ -6,7 +6,7 @@
  * Return: Always 0(Success)
  */
 
-int main()
+int main(void)
 {
 	puts("0123456789");
 	return (0);
