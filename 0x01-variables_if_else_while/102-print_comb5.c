@@ -17,27 +17,27 @@ int main(void)
 	{
 		while (second < 58)
 		{
-			while (third < 58)
+			while (third < 58 && fourth < 58)
 			{
-				while (fourth < 58)
+				if (third > first || (third == first && fourth > second))
 				{
-					if (third > first || (third == first && fourth > second))
+					putchar(first);
+					putchar(second);
+					putchar (' ');
+					putchar(third);
+					putchar(fourth);
+					if (first != 57 || second != 56)
 					{
-						putchar(first);
-						putchar(second);
-						putchar (' ');
-						putchar(third);
-						putchar(fourth);
-						if (first != 57 || second != 56)
-						{
-							putchar(',');
-							putchar(' ');
-						}
+						putchar(',');
+						putchar(' ');
 					}
-					fourth++;
 				}
-				fourth = 48;
-				third++;
+				fourth++;
+				if (fourth == 58)
+				{
+					fourth = 48;
+					third++;
+				}
 			}
 			third = 48;
 			second++;
