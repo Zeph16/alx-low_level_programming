@@ -9,17 +9,17 @@
 int main(void)
 {
 	int i;
-	double prev = 1;
-	double cur = 2;
-	double temp;
+	float prev = 1;
+	float cur = 2;
+	float temp;
 
 	printf("1, 2, ");
 	for (i = 2; i < 98; i++)
 	{
 		temp = prev + cur;
-		printf("%.0f", temp);
 		prev = cur;
 		cur = temp;
+		printf("%.0f", temp);
 		if (i != 97)
 		{
 			printf(", ");
