@@ -9,10 +9,9 @@ void print_to_98(int n)
 {
 	int cur;
 
-	for (cur = n; cur != 98; cur < 98 ? i++:i--)
+	for (cur = n; cur != 98; cur < 98 ? cur++ : cur--)
 	{
 		printf("%i, ", cur);
 	}
 	printf("98\n");
-	return (0);
 }
