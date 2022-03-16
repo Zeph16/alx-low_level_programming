@@ -32,7 +32,7 @@ void jack_bauer(void)
 			fourth = 48;
 			second++;
 		}
-		else (second > 57)
+		if (second > 57)
 		{
 			second = 48;
 			first++;
