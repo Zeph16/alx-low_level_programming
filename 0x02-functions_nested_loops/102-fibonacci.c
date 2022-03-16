@@ -10,10 +10,10 @@ int main(void)
 {
 	int i;
 	long prev = 1;
-	long cur = 1;
+	long cur = 2;
 	long temp;
 
-	printf("1, 1, ");
+	printf("1, 2, ");
 	for (i = 2; i < 50; i++)
 	{
 		temp = prev + cur;
