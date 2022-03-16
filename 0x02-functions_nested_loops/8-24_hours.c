@@ -3,7 +3,6 @@
 /**
  * jack_bauer - prints every minute of the day
  *
- * Return: Void
  */
 
 void jack_bauer(void)
@@ -33,7 +32,7 @@ void jack_bauer(void)
 			fourth = 48;
 			second++;
 		}
-		else if (second > 57)
+		else (second > 57)
 		{
 			second = 48;
 			first++;
