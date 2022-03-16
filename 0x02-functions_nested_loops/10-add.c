@@ -4,7 +4,6 @@
  * add - ...adds numbers
  * @n: first number
  * @m: second number
- * 
  * Return: Sum
  */
 
