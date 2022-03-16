@@ -11,7 +11,7 @@ int main(void)
 	int prev = 1;
 	int cur = 2;
 	int temp;
-	long sum = 0;
+	long sum = 2;
 
 
 	while (1)
@@ -31,9 +31,6 @@ int main(void)
 			break;
 		}
 	}
-	if (sum != 0)
-	{
-		printf("%ld\n", sum);
-	}
+	printf("%ld\n", sum);
 	return (0);
 }
