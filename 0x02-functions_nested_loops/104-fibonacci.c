@@ -9,15 +9,15 @@
 int main(void)
 {
 	int i;
-	unsigned long prev = 1;
-	unsigned long cur = 2;
-	unsigned long temp;
+	double prev = 1;
+	double cur = 2;
+	double temp;
 
 	printf("1, 2, ");
 	for (i = 2; i < 98; i++)
 	{
 		temp = prev + cur;
-		printf("%lu", temp);
+		printf("%.0f", temp);
 		prev = cur;
 		cur = temp;
 		if (i != 97)
