@@ -17,7 +17,7 @@ void more_numbers(void)
 			_putchar(i);
 			if (j > 47)
 				_putchar(j++);
-			if (i == 58)
+			if (i == 57)
 			{
 				i = 49;
 				j = 48;
