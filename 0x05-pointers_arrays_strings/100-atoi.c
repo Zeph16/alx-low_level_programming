@@ -10,8 +10,7 @@
 int _atoi(char *s)
 {
 	int i, j, len, index, multiplier = 1, converted = 0,  nums = 0;
-	int plus = 0, minus = 0;
-	int done = 0, start = 1000, end = 0;
+	int plus = 0, minus = 0, done = 0, start = 1000, end = 0;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
@@ -42,11 +41,12 @@ int _atoi(char *s)
 		{
 			multiplier *= 10;
 		}
-		converted += (s[i] - 48) * multiplier;
+		if (minus % 2 != 0)
+			converted -= (s[i] - 48) * multiplier;
+		else
+			converted -= (s[i] - 48) * multiplier;
 		multiplier = 1;
 		index = len - 1;
 	}
-	if (minus % 2 != 0)
-		converted *= -1;
 	return (converted);
 }
