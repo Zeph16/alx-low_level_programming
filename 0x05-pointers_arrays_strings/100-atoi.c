@@ -44,7 +44,7 @@ int _atoi(char *s)
 		multiplier = 1;
 		index = len - 1;
 	}
-	if (minus > plus)
+	if (minus % 2 != 0)
 		converted *= -1;
 	return (converted);
 }
