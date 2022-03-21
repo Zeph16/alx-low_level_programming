@@ -30,7 +30,7 @@ int _atoi(char *s)
 			done = 1;
 		}
 	}
-	if (end == 0 && nums == 0)
+	if (end == 0 && nums != 0)
 		end = i;
 	if (start == 1000)
 		start = 0;
