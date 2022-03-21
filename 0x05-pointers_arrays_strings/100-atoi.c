@@ -15,17 +15,16 @@ int _atoi(char *s)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (str[i] >= 48 && str[i] <= 57 && !done)
+		if (s[i] >= 48 && s[i] <= 57 && !done)
 		{
-			printf("%c\n", str[i]);
-			strnum[nums] = str[i];
+			strnum[nums] = s[i];
 			nums++;
 		}
-		else if (str[i] == 43 && !done)
+		else if (s[i] == 43 && !done)
 		{
 			plus++;
 		}
-		else if (str[i] == 45 && !done)
+		else if (s[i] == 45 && !done)
 		{
 			minus++;
 		}
