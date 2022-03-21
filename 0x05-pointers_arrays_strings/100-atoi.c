@@ -32,6 +32,8 @@ int _atoi(char *s)
 	}
 	if (end == 0)
 		end = i;
+	if (start == 1)
+		start = 0;
 	len = end - start;
 	index = len - 1;
 	for (i = start; i < end; i++)
