@@ -9,11 +9,13 @@
 
 char *cap_string(char *s)
 {
-	int i;
+	int i, j;
 
 	for (i = 0; s[i] != '\0'; i++)
 		if (s[i] == ' ')
-			if (s[i + 1] >= 97 && s[i + 1] <= 122)
-				s[i + 1] -= 32;
+			for (; s[i] != '\0'; i++)
+				if (s[i + 1] >= 97 && s[i + 1] <= 122)
+					s[i + 1] -= 32;
+
 	return (s);
 }
