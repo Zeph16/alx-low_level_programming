@@ -13,9 +13,13 @@ char *cap_string(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 		if (s[i] == ' ')
-			for (; s[i] != '\0'; i++)
+			for (j = i; s[i] != '\0'; i++)
 				if (s[i + 1] >= 97 && s[i + 1] <= 122)
+				{
 					s[i + 1] -= 32;
+					break;
+					i = j;
+				}
 
 	return (s);
 }
