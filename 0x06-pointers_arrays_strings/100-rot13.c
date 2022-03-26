@@ -3,7 +3,6 @@
 /**
  * rot13 - caesar cipher with key 13
  * @s: string to be encrypted
- * 
  * Return: char pointer to encrypted string
  */
 char *rot13(char *s)
@@ -17,7 +16,7 @@ char *rot13(char *s)
 	{
 		for (j = 0; alpha[j]; j++)
 		{
-			if (s[i] ==alpha[j])
+			if (s[i] == alpha[j])
 			{
 				s[i] = encryptBase[j];
 				break;
