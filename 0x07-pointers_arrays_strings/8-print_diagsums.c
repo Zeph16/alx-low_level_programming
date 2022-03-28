@@ -5,13 +5,14 @@
  * @a: array
  * @size: size of diagonal
  */
+
 void print_diagsums(int *a, int size)
 {
-	int i, d1 = 0, d2 = 0;
+	int ini, dia1 = 0, dia2 = 0;
 
-	for (i = 0; i < size * size; i += (size + 1))
-		d1 += a[ini];
-	for (i = size - 1; i < (size * size) - (size - 1); i += (size - 1))
-		d2 += a[i];
-	printf("%d, %d\n", d1, d2);
+	for (ini = 0; ini < size * size; ini += (size + 1))
+		dia1 += a[ini];
+	for (ini = size - 1; ini < (size * size) - (size - 1); ini += (size - 1))
+		dia2 += a[ini];
+	printf("%d, %d\n", dia1, dia2);
 }
