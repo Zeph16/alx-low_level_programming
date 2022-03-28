@@ -3,7 +3,6 @@
  * _strspn - calculates length of prefix of a substring in the string
  * @s: the string
  * @accept: the substring
- * 
  * Return: the length
  */
 unsigned int _strspn(char *s, char *accept)
