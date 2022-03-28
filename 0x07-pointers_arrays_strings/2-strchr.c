@@ -10,13 +10,21 @@
 
 char *_strchr(char *s, char c)
 {
-	int i;
-	char *loc;
+	int i, found = 0;
+	char *loc = "";
 
 	for (i = 0; s[i] != '\0'; i++)
+	{
 		if (s[i] == c)
-			*loc = c;
-	if (*loc != c)
-		return (NULL);
+		{
+			found = 1;
+			break;
+		}
+	}
+
+	if (found)
+	{
+		for (j = 0; s[i + j] = '\0'; i++)
+			loc[j] = s[i + j];
 	return (loc);
 }
