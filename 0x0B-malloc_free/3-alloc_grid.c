@@ -14,14 +14,26 @@ int **alloc_grid(int width, int height)
 	int i, j;
 	int **twod;
 
-	if (width < 0 || height < 0)
+	if (width == 0 || height == 0)
 		return (NULL);
 
-	twod = malloc(sizeof(int*) * height);
+	twod = malloc(sizeof(int *) * height);
 	if (twod == NULL)
+	{
+		free(twod);
 		return (NULL);
+	}
 	for (i = 0; i < height; i++)
+	{
 		twod[i] = malloc(sizeof(int) * width);
+		if (twod[i] == NULL)
+		{
+			for (i--; i >= 0; i--)
+				free(twod[i]);
+			free(twod);
+			return (NULL);
+		}
+	}
 	for (i = 0; i < height; i++)
 	{
 		for (j = 0; j < width; j++)
