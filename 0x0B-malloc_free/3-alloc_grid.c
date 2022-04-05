@@ -12,19 +12,16 @@
 int **alloc_grid(int width, int height)
 {
 	int i, j;
-	int *oned;
 	int **twod;
 
-	if (width == 0 || height == 0)
+	if (width < 0 || height < 0)
 		return (NULL);
 
-	oned = malloc(sizeof(int) * width);
-	if (oned == NULL)
-		return (NULL);
-	twod = malloc(sizeof(oned) * height);
+	twod = malloc(sizeof(int*) * height);
 	if (twod == NULL)
 		return (NULL);
-
+	for (i = 0; i < height; i++)
+		twod[i] = malloc(sizeof(int) * width);
 	for (i = 0; i < height; i++)
 	{
 		for (j = 0; j < width; j++)
