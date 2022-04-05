@@ -29,7 +29,7 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	}
 	for (k = 0; k < i; k++)
-		arr[i] = s1[i];
+		arr[k] = s1[k];
 	l = k;
 	for (j = 0; j <= l; j++, k++)
 		arr[k] = s2[j];
