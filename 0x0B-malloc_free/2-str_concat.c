@@ -28,7 +28,7 @@ char *str_concat(char *s1, char *s2)
 		free(arr);
 		return (NULL);
 	}
-	for (k = 0; k < i; i++)
+	for (k = 0; k < i; k++)
 		arr[i] = s1[i];
 	l = k;
 	for (j = 0; j <= l; j++, k++)
