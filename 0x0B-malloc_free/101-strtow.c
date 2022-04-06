@@ -26,7 +26,7 @@ char **strtow(char *str)
 		else if (str[i + 1] == '\0' && str[i] != ' ')
 			wordsnum++;
 	}
-
+	printf("%i\n", wordsnum);
 	words = malloc(wordsnum * sizeof(char *));
 	if (words == NULL)
 	{
