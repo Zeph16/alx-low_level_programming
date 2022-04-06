@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * argstostr - concatenates strings
@@ -14,7 +15,7 @@ char *argstostr(int ac, char **av)
 	int i, j, index, mem = 0;
 	char *concat;
 
-	if (ac == 0 || av == null)
+	if (ac == 0 || av == NULL)
 		return (NULL);
 	for (i = 0; i < ac; i++)
 		mem += strlen(av[i]) + 1;
