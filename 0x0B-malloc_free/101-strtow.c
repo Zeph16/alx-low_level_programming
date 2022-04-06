@@ -27,7 +27,7 @@ char **strtow(char *str)
 			wordsnum++;
 	}
 
-	words = malloc(wordsnum * sizeof(char *));
+	words = (char **)malloc(wordsnum * sizeof(char *));
 	if (words == NULL)
 	{
 		free(words);
@@ -35,7 +35,7 @@ char **strtow(char *str)
 	}
 	for (si = 0; si < wordsnum; i++)
 	{
-		words[si] = malloc(100 * sizeof(char));
+		words[si] = (char *)malloc(100 * sizeof(char));
 		if (words[si] == NULL)
 		{
 			free(words[si]);
