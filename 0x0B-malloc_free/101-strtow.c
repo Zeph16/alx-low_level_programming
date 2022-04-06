@@ -11,19 +11,19 @@
 
 char **strtow(char *str)
 {
-	unsigned int i;
-	int j = 0;
+	unsigned int ui;
+	int i, j = 0;
 	int wordsnum = 0;
 	int wordsi = 0;
 	char *words;
 
-	if (str == NULL or str == "")
+	if (str == NULL || str == "")
 		return (NULL);
-	for (i = 0; i < strlen(str); i++)
+	for (ui = 0; ui < strlen(str); ui++)
 	{
-		if (str[i] == ' ' && i != 0)
+		if (str[ui] == ' ' && ui != 0)
 			wordsnum++;
-		else if (str[i + 1] == '\0' && str[i] != ' ')
+		else if (str[ui + 1] == '\0' && str[ui] != ' ')
 			wordsnum++;
 	}
 
@@ -35,10 +35,10 @@ char **strtow(char *str)
 	}
 	for (i = 0; i < wordsnum; i++)
 	{
-		str[i] = malloc(100 * sizeof(char));
-		if (str[i] == NULL)
+		words[i] = malloc(100 * sizeof(char));
+		if (words[i] == NULL)
 		{
-			free(str[i]);
+			free(words[i]);
 			return (NULL);
 		}
 	}
