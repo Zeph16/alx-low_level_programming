@@ -17,7 +17,7 @@ char **strtow(char *str)
 	int wordsi = 0;
 	char *words;
 
-	if (str == NULL || str == "")
+	if (str == NULL || strlen(str) == 0)
 		return (NULL);
 	for (ui = 0; ui < strlen(str); ui++)
 	{
