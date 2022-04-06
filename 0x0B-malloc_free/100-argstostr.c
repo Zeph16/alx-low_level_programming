@@ -12,7 +12,8 @@
 
 char *argstostr(int ac, char **av)
 {
-	int i, j, index, mem = 0;
+	int i, index, mem = 0;
+	unsigned int j;
 	char *concat;
 
 	if (ac == 0 || av == NULL)
