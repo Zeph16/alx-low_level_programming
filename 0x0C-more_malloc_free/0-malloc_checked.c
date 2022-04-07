@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdlib.h>
 /**
  * malloc_checked - mallocs, but checks the malloc after mallocing
  * @b: size of the malloc
@@ -15,7 +15,7 @@ void *malloc_checked(unsigned int b)
 	if (mem == NULL)
 	{
 		free(mem);
-		return (98);
+		exit(98);
 	}
 	return (mem);
 }
