@@ -7,6 +7,7 @@
  * @age: its age
  * @owner: its owner
  */
+#include <stdlib.h>
 
 struct dog
 {
