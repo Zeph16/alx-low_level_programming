@@ -1,7 +1,5 @@
 #include "dog.h"
 
-#include "dog.h"
-
 /**
  * _strlen - evaluates the length of a string
  * @s: string to be evaluated
