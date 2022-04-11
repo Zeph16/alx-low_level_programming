@@ -1,67 +1,69 @@
 #include "dog.h"
 
 /**
- * _strlen - evaluates the length of a string
- * @s: string to be evaluated
+ * _strlen - returns the length of a string
+ * @s: the string
  *
- * Return: the length of the string
+ * Return: the length
  */
 
 int _strlen(char *s)
 {
-	int i;
-	int len = 0;
+	int x = 0;
 
-	for (i = 0; *(s + i) != '\0'; i++)
-	{
-		len++;
-	}
-	return (len);
+	while (*(s + x) != '\0')
+		x++;
+	return (x);
 }
 
 /**
- * new_dog - creates a new dog variable
+ * new_dog - creates  a new dog
  * @name: its name
  * @age: its age
  * @owner: its owner
  *
- * Return: a dog variable
+ * Return: the dog
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *doge;
-	int i;
-	char *dupname, *dupowner;
+	dog_t *new_dog;
+	int x;
+	char *n, *o;
 
 	if (name == NULL || owner == NULL)
 		return (NULL);
-	doge = malloc(sizeof(dog_t));
-	if (doge == NULL)
+
+	/* memory allocation for pointers */
+	new_dog = malloc(sizeof(dog_t));
+	if (new_dog == NULL)
 		return (NULL);
-	dupname = malloc(sizeof(char) * (_strlen(name) + 1));
-	if (dupname == NULL)
+	n = malloc(sizeof(char) * (_strlen(name) + 1));
+	if (n  == NULL)
 	{
-		free(doge);
+		free(new_dog);
 		return (NULL);
 	}
-	dupowner = malloc(sizeof(char) * (_strlen(owner) + 1));
-	if (dupowner == NULL)
+	o = malloc(sizeof(char) * (_strlen(owner) + 1));
+	if (o == NULL)
 	{
-		free(doge);
-		free(dupname);
+		free(n);
+		free(new_dog);
 		return (NULL);
 	}
 
-	for (i = 0; name[i] != '\0'; i++)
-		dupname[i] = name[i];
-	dupname[i] = '\0';
-	for (i = 0; owner[i] != '\0'; i++)
-		dupowner[i] = owner[i];
-	dupowner[i] = '\0';
+	/* copy string arguments into new variables */
+	for (x = 0; name[x] != '\0'; x++)
+		n[x] = name[x];
+	n[x] = '\0';
+	for (x = 0; owner[x] != '\0'; x++)
+		o[x] = owner[x];
+	o[x] = '\0';
 
-	doge->name = name;
-	doge->age = age;
-	doge->owner = owner;
-	return (doge);
+	/*initializing new dog */
+	new_dog->name = n;
+	new_dog->age = age;
+	new_dog->owner = o;
+
+	return (new_dog);
 }
