@@ -1,5 +1,5 @@
 #include "3-calc.h"
-#include <stdlib.h>
+
 /**
  * get_op_func - returns a pointer to the corresponding operation function
  * @s: the operation

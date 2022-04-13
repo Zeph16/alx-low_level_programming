@@ -1,6 +1,9 @@
 #ifndef calc_madness
 #define calc_madness
 
+#include <stdlib.h>
+#include <stdio.h>
+
 /**
  * struct op - Struct op
  *

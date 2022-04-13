@@ -22,12 +22,9 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		return (99);
 	}
-	if (get_op_func(argv[2]) == op_div && atoi(argv[3]) == 0)
-	{
-		printf("Error\n");
-		return (100);
-	}
-	if (get_op_func(argv[2]) == op_mod && atoi(argv[3]) == 0)
+
+	if ((get_op_func(argv[2]) == op_div || get_op_func(argv[2]) == op_mod)
+		&& atoi(argv[3]) == 0)
 	{
 		printf("Error\n");
 		return (100);
