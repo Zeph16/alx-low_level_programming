@@ -17,12 +17,12 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		return (98);
 	}
-	if (get_op_func(argv[2]) == NULL)
+
+	if (argv[2][1] != '\0' || get_op_func(argv[2]) == NULL)
 	{
 		printf("Error\n");
 		return (99);
 	}
-
 	if ((get_op_func(argv[2]) == op_div || get_op_func(argv[2]) == op_mod)
 		&& atoi(argv[3]) == 0)
 	{
