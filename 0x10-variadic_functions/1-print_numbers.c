@@ -1,6 +1,7 @@
 #include "variadic_functions.h"
 #include <stdio.h>
-/*
+
+/**
  * print_numbers - prints a certain amount of numbers
  * @separator: character between numbers
  * @n: the certain amount
@@ -20,6 +21,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		else
 			printf("%d", va_arg(nums, int));
 	}
-	printf("%d\n", va_arg(nums, int));
+	if (n != 0)
+		printf("%d\n", va_arg(nums, int));
 	va_end(nums);
 }
