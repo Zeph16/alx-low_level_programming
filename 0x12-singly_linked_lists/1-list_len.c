@@ -1,5 +1,5 @@
 #include "lists.h"
-
+#include <stddef.h>
 /**
  * list_len - returns the length of a linked list
  * @h: address of the first node
@@ -8,7 +8,7 @@
  */
 size_t list_len(const list_t *h)
 {
-	int len = 1;
+	size_t len = 1;
 	list_t temp;
 
 	if (!h)
