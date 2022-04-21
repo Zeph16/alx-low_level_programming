@@ -2,6 +2,7 @@
 #define SINGLE_LINK
 
 #include <stdlib.h>
+#include <string.h>
 /**
  * struct LinkedList - node that contains a string and its length
  * @str: the string
