@@ -2,7 +2,7 @@
 #define SINGLE_LINK
 
 /**
- * struct LinkedList - a singly linked list node containing a string and its length
+ * struct LinkedList - node that contains a string and its length
  * @str: the string
  * @len: the length
  */
