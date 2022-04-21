@@ -5,6 +5,7 @@
  * struct LinkedList - node that contains a string and its length
  * @str: the string
  * @len: the length
+ * @next: address of next node
  */
 typedef struct LinkedList
 {
