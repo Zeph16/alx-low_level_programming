@@ -1,7 +1,7 @@
-#include <stdlib.h>
 #ifndef SINGLE_LINK
 #define SINGLE_LINK
 
+#include <stdlib.h>
 /**
  * struct LinkedList - node that contains a string and its length
  * @str: the string
@@ -17,5 +17,6 @@ typedef struct LinkedList
 
 size_t print_list(const list_t *h);
 size_t list_len(const list_t *h);
+list_t *add_node(list_t **head, const char *str);
 
 #endif
