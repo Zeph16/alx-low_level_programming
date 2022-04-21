@@ -1,8 +1,7 @@
-global _start
+global main
 
 section .text
-
-_start:
+main:
   mov rax, 1
   mov rdi, 1 
   mov rsi, hol   
