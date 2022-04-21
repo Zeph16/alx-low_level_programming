@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #ifndef SINGLE_LINK
 #define SINGLE_LINK
 
