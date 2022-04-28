@@ -15,7 +15,7 @@ void print_binary(unsigned long int n)
 		_putchar('0');
 		return;
 	}
-	for (i = 0; i < 16; i++)
+	for (i = 0; i < 15; i++)
 		shifter *= 2;
 	while (shifter != 0)
 	{
