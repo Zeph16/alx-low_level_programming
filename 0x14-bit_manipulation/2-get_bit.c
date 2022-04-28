@@ -12,6 +12,8 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned long int shifter = 1, checker, i;
 
+	if (n == 0 && index == 0)
+		return (0);
 	for (i = 0; i < index; i++)
 		shifter <<= 1;
 	if (shifter > n)
