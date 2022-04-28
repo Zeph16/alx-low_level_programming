@@ -10,7 +10,7 @@ void print_binary(unsigned long int n)
 	unsigned long int shifter = 1, checker;
 	int oneFound = 0, i;
 
-	for (i = 0; i < 15; i++)
+	for (i = 0; i < sizeof(unsigned long int) - 1; i++)
 		shifter *= 2;
 	while (shifter != 0)
 	{
