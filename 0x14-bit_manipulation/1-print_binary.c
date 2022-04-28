@@ -8,13 +8,8 @@
 void print_binary(unsigned long int n)
 {
 	unsigned long int shifter = 1, checker;
-	int oneFound, i;
+	int oneFound = 0, i;
 
-	if (n == 0)
-	{
-		_putchar('0');
-		return;
-	}
 	for (i = 0; i < 15; i++)
 		shifter *= 2;
 	while (shifter != 0)
@@ -25,7 +20,7 @@ void print_binary(unsigned long int n)
 			_putchar('1');
 			oneFound = 1;
 		}
-		else if (oneFound)
+		else if (oneFound || shifter == 1)
 			_putchar('0');
 		shifter >>= 1;
 	}
