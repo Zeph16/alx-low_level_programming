@@ -14,18 +14,18 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (filename == NULL)
 		return (0);
 	fdop = open(filename, O_RDONLY);
-	if (fdo == -1)
+	if (fdop == -1)
 		return (0);
 	buf = malloc(sizeof(char) * letters);
 	if (buf == NULL)
 		return (0);
 	fdrd = read(fdop, buf, letters);
-	if (fdr == -1)
+	if (fdrd == -1)
 		return (0);
 	fdwr = write(STDOUT_FILENO, buf, fdrd);
-	if (fdw == -1)
+	if (fdwr == -1)
 		return (0);
 	free(buf);
 	close(fdop);
-	return (fdw);
+	return (fdwr);
 }
