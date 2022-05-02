@@ -1,10 +1,12 @@
 #include "main.h"
+
 /**
  * create_file - creates a file.
  * @filename: Name of the file to create.
  * @text_content: string to write to the file and NULL if no entry.
  * Return: 1 on success, -1 on failure.
  */
+
 int create_file(const char *filename, char *text_content)
 {
 	int fd, length;
