@@ -17,7 +17,7 @@ int jump_search(int *array, size_t size, int value)
 	step = (int)sqrt((double)size);
 
 	do {
-		printf("Value hecked array[%d] = [%d]\n", index, array[index]);
+		printf("Value checked array[%d] = [%d]\n", index, array[index]);
 		if (array[index] == value)
 			return (index);
 		prev = index;
